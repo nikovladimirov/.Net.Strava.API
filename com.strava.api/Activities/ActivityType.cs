@@ -87,6 +87,10 @@ namespace com.strava.api.Segments
         /// <summary>
         /// Snowshoe
         /// </summary>
-        Snowshoe
+        Snowshoe,
+        /// <summary>
+        /// Unknown - only returned if the activity type cannot be parsed (could be that a new type of activity has been introduced that the API doesnt yet support)
+        /// </summary>
+        Unknown
     }
 }

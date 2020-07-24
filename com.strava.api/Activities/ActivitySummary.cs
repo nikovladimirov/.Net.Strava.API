@@ -53,7 +53,11 @@ namespace com.strava.api.Segments
         /// </summary>
         public ActivityType Type
         {
-            get { return (ActivityType) Enum.Parse(typeof (ActivityType), _type); }
+            get
+            {
+                try { return (ActivityType)Enum.Parse(typeof(ActivityType), _type); }
+                catch { return ActivityType.Unknown; }
+            }
         }
 
         /// <summary>
