@@ -88,17 +88,17 @@ namespace com.strava.api.Authentication
 
             switch (scope)
             {
+                case Scope.Write:
+                    scopeLevel = "read_all,activity:read_all,profile:read_all,activity:write";
+                    break;
                 case Scope.Full:
-                    scopeLevel = "view_private,write";
+                    scopeLevel = "read_all,activity:read_all,profile:read_all,profile:write,activity:write";
                     break;
                 case Scope.Public:
-                    scopeLevel = "public";
+                    scopeLevel = "read";
                     break;
                 case Scope.ViewPrivate:
-                    scopeLevel = "view_private";
-                    break;
-                case Scope.Write:
-                    scopeLevel = "write";
+                    scopeLevel = "read_all,activity:read_all,profile:read_all";
                     break;
             }
 
