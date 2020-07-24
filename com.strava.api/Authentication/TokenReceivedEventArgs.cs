@@ -17,6 +17,7 @@
 
 #endregion
 
+using com.strava.api.Common;
 using System;
 
 namespace com.strava.api.Authentication
@@ -38,6 +39,7 @@ namespace com.strava.api.Authentication
         public TokenReceivedEventArgs(String token)
         {
             Token = token;
+            Global.Token = token;
         }
     }
 }
