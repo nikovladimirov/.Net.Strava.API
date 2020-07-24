@@ -94,6 +94,7 @@
     <Compile Include="Clubs\SportType.cs" />
     <Compile Include="Common\Coordinate.cs" />
     <Compile Include="Common\Dimension.cs" />
+    <Compile Include="Common\Global.cs" />
     <Compile Include="Common\MapType.cs" />
     <Compile Include="Common\PolylineDecoder.cs" />
     <Compile Include="Common\Unmarshaller.cs" />

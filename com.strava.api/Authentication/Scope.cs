@@ -25,19 +25,19 @@ namespace com.strava.api.Authentication
     public enum Scope
     {
         /// <summary>
-        /// Only public data can be received.
+        /// Only public data can be received but is READ ONLY
         /// </summary>
         Public,
         /// <summary>
-        /// Data can be written. This scope is needed if you want to upload activities.
-        /// </summary>
-        Write,
-        /// <summary>
-        /// Only private data can be received.
+        /// Public and Private data can be received, but is READ ONLY
         /// </summary>
         ViewPrivate,
         /// <summary>
-        /// Private and public data can be received and write permissions are granted.
+        /// Data can be written. This scope is needed if you want to upload activities, but does not allow write access to the user profile
+        /// </summary>
+        Write,
+        /// <summary>
+        /// Private and public data can be received and write permissions are granted for both profile and activity data
         /// </summary>
         Full
     }
