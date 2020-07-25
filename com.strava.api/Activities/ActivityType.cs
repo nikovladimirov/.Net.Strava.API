@@ -25,53 +25,141 @@ namespace com.strava.api.Segments
     public enum ActivityType
     {
         /// <summary>
-        /// Ride
+        /// AlpineSki
         /// </summary>
-        Ride,
+        AlpineSki,
         /// <summary>
-        /// Run
+        /// BackcountrySki
         /// </summary>
-        Run,
+        BackcountrySki,
         /// <summary>
-        /// Swim
+        /// Canoeing
         /// </summary>
-        Swim,
+        Canoeing,
+        /// <summary>
+        /// Crossfit
+        /// </summary>
+        Crossfit,
+        /// <summary>
+        /// EBikeRide
+        /// </summary>
+        EBikeRide,
+        /// <summary>
+        /// Elliptical
+        /// </summary>
+        Elliptical,
+        /// <summary>
+        /// Golf
+        /// </summary>
+        Golf,
+        /// <summary>
+        /// Handcycle
+        /// </summary>
+        Handcycle,
         /// <summary>
         /// Hike
         /// </summary>
         Hike,
         /// <summary>
+        /// IceSkate
+        /// </summary>
+        IceSkate,
+        /// <summary>
+        /// InlineSkate
+        /// </summary>
+        InlineSkate,
+        /// <summary>
+        /// Kayaking
+        /// </summary>
+        Kayaking,
+        /// <summary>
+        /// Kitesurf
+        /// </summary>
+        Kitesurf,
+        /// <summary>
+        /// NordicSki
+        /// </summary>
+        NordicSki,
+        /// <summary>
+        /// Ride
+        /// </summary>
+        Ride,
+        /// <summary>
+        /// RockClimbing
+        /// </summary>
+        RockClimbing,
+        /// <summary>
+        /// RollerSki
+        /// </summary>
+        RollerSki,
+        /// <summary>
+        /// Rowing
+        /// </summary>
+        Rowing,
+        /// <summary>
+        /// Run
+        /// </summary>
+        Run,
+        /// <summary>
+        /// Sail
+        /// </summary>
+        Sail,
+        /// <summary>
+        /// Skateboard
+        /// </summary>
+        Skateboard,
+        /// <summary>
+        /// Snowboard
+        /// </summary>
+        Snowboard,
+        /// <summary>
+        /// Snowshoe
+        /// </summary>
+        Snowshoe,
+        /// <summary>
+        /// Soccer
+        /// </summary>
+        Soccer,
+        /// <summary>
+        /// StairStepper
+        /// </summary>
+        StairStepper,
+        /// <summary>
+        /// StandUpPaddling
+        /// </summary>
+        StandUpPaddling,
+        /// <summary>
+        /// Surfing
+        /// </summary>
+        Surfing,
+        /// <summary>
+        /// Swim
+        /// </summary>
+        Swim,
+        /// <summary>
+        /// Velomobile
+        /// </summary>
+        Velomobile,
+        /// <summary>
+        /// VirtualRide
+        /// </summary>
+        VirtualRide,
+        /// <summary>
+        /// VirtualRun
+        /// </summary>
+        VirtualRun,
+        /// <summary>
         /// Walk
         /// </summary>
         Walk,
         /// <summary>
-        /// Nordic Ski
+        /// WeightTraining
         /// </summary>
-        NordicSki,
+        WeightTraining,
         /// <summary>
-        /// Alpine Ski
+        /// Wheelchair
         /// </summary>
-        AlpineSki,
-        /// <summary>
-        /// Backcountry Ski
-        /// </summary>
-        BackcountrySki,
-        /// <summary>
-        /// Ice Skate
-        /// </summary>
-        IceSkate,
-        /// <summary>
-        /// Inline Skate
-        /// </summary>
-        InlineSkate,
-        /// <summary>
-        /// Kite Surf
-        /// </summary>
-        Kitesurf,
-        /// <summary>
-        /// Roller Ski
-        /// </summary>
-        RollerSki,
+        Wheelchair,
         /// <summary>
         /// Windsurf
         /// </summary>
@@ -81,13 +169,9 @@ namespace com.strava.api.Segments
         /// </summary>
         Workout,
         /// <summary>
-        /// Snowboard
+        /// Yoga
         /// </summary>
-        Snowboard,
-        /// <summary>
-        /// Snowshoe
-        /// </summary>
-        Snowshoe,
+        Yoga,
         /// <summary>
         /// Unknown - only returned if the activity type cannot be parsed (could be that a new type of activity has been introduced that the API doesnt yet support)
         /// </summary>
