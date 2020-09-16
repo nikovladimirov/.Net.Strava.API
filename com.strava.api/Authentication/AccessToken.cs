@@ -32,5 +32,14 @@ namespace com.strava.api.Authentication
         /// </summary>
         [JsonProperty("access_token")]
         public String Token { get; set; }
+
+        [JsonProperty("expires_at")]
+        public String ExpiresAt { get; set; }
+
+        [JsonProperty("expires_in")]
+        public String ExpiresIn { get; set; }
+
+        [JsonProperty("refresh_token")]
+        public String RefreshToken { get; set; }
     }
 }
