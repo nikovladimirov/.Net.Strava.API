@@ -39,7 +39,6 @@ namespace com.strava.api.Authentication
         public TokenReceivedEventArgs(String token)
         {
             Token = token;
-            Global.Token = token;
         }
     }
 }
