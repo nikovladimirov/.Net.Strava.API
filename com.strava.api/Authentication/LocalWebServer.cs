@@ -130,6 +130,7 @@ namespace com.strava.api.Authentication
             String json = await Http.WebRequest.SendPostAsync(new Uri(url));
 
             AccessToken auth = Unmarshaller<AccessToken>.Unmarshal(json);
+            Global.SaveValues();
 
             if (!String.IsNullOrEmpty(auth.Token))
             {

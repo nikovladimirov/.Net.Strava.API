@@ -17,6 +17,7 @@
 
 #endregion
 
+using com.strava.api.Common;
 using System;
 
 namespace com.strava.api.Authentication

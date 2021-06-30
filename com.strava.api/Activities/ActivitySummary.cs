@@ -53,7 +53,11 @@ namespace com.strava.api.Segments
         /// </summary>
         public ActivityType Type
         {
-            get { return (ActivityType) Enum.Parse(typeof (ActivityType), _type); }
+            get
+            {
+                try { return (ActivityType)Enum.Parse(typeof(ActivityType), _type); }
+                catch { return ActivityType.Unknown; }
+            }
         }
 
         /// <summary>
@@ -333,5 +337,11 @@ namespace com.strava.api.Segments
         /// </summary>
         [JsonProperty("athlete")]
         public AthleteMeta Athlete { get; set; }
+
+        /// <summary>
+        /// Suffer Score value for the activity
+        /// </summary>
+        [JsonProperty("suffer_score")]
+        public int SufferScore { get; set; }
     }
 }
