@@ -1,13 +1,16 @@
 Strava.NET
 ============
 
-NOTE: Visit the new homepage at www.sascha-simon.com for more information and updates on the Strava Client using the framework.
+Important Notes (Read me first!)
+============
 
-Current version: 3.0.0 (09/30/2014)
+This project was forked from the timheuer repo, which in turn was forked from the original by sascha-simon, neither of which have been updated in a long time.
+It is therefore very possible that various aspects of the project don't work as originally intended, or don't work full stop, due to changes made by Strava in their API.
 
-You can now check out the Samples-Project: [Samples-project on GitHub](https://github.com/inexcitus/stravasamples)
+Intro
+============
 
-[Changelog](http://www.sascha-simon.com/Changelog)
+Current version: 4.0.1 (June 2021)
 
 Hopefully this small framework makes using the Strava API a little bit easier!
 Please keep in mind that this framework is in a pretty early stage and things are about to change.
@@ -15,13 +18,12 @@ Kudos to Strava for letting people use data uploaded to Strava! Strava.NET uses 
 
 You can get the framework by using NuGet:
 
-    PM> Install-Package Strava.NET
+    PM> Install-Package com.strava.api
 
 Feedback
 ============
 
-If you have any feedback, bug reports or suggestions, feel free to send me an email.
-My mail address is strava (at) sascha-simon (dot) com.
+If you have any feedback, bug reports or suggestions, feel free to add an issue to the repo and I'll look in to it
 
 
 Getting an access token from Strava
@@ -41,6 +43,7 @@ StaticAuthentication auth = new StaticAuthentication("<insert token here>");
 
 Upon the next start of the program, you can then load the token from your hard disk and use the StaticAuthentication method described above.
 
+The date and time that the token expires will also be saved, so it is possible to check this and only obtain a new token when this is actually required.
 
 Hints
 --------------
@@ -251,6 +254,4 @@ check.UploadChecked += delegate(object o, UploadStatusCheckedEventArgs args)
 
 check.Start();
 ```
-
-
 
