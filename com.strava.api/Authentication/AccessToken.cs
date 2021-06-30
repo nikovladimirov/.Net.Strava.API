@@ -27,10 +27,53 @@ namespace com.strava.api.Authentication
     /// </summary>
     public class AccessToken
     {
+        private String token, expiresat, expiresin, refreshtoken;
+
         /// <summary>
         /// The access token.
         /// </summary>
         [JsonProperty("access_token")]
-        public String Token { get; set; }
+        public String Token
+        {
+            get { return token; }
+            set
+            {
+                token = value;
+                Common.Global.Token = value;
+            }
+        }
+
+        [JsonProperty("expires_at")]
+        public String ExpiresAt
+        {
+            get { return expiresat; }
+            set
+            {
+                expiresat = value;
+                Common.Global.ExpiresAt = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(long.Parse(value));
+            }
+        }
+
+        [JsonProperty("expires_in")]
+        public String ExpiresIn
+        {
+            get { return expiresin; }
+            set
+            {
+                expiresin = value;
+                Common.Global.ExpiresIn = value;
+            }
+        }
+
+        [JsonProperty("refresh_token")]
+        public String RefreshToken
+        {
+            get { return refreshtoken; }
+            set
+            {
+                refreshtoken = value;
+                Common.Global.RefreshToken = value;
+            }
+        }
     }
 }
