@@ -1,24 +1,13 @@
-Strava.NET
+com.strava.v3.api
 ============
 
 Important Notes (Read me first!)
 ============
 
-This project was forked from the timheuer repo, which in turn was forked from the original by sascha-simon, neither of which have been updated in a long time.
+This project was forked from the RobertEves92 repo, which in turn was forked from the original by sascha-simon, neither of which have been updated in a long time.
 It is therefore very possible that various aspects of the project don't work as originally intended, or don't work full stop, due to changes made by Strava in their API.
 
-Intro
-============
-
-Current version: 4.0.1 (June 2021)
-
-Hopefully this small framework makes using the Strava API a little bit easier!
-Please keep in mind that this framework is in a pretty early stage and things are about to change.
-Kudos to Strava for letting people use data uploaded to Strava! Strava.NET uses the great Json.NET library from James Newton-King - such a great piece of code.
-
-You can get the framework by using NuGet:
-
-    PM> Install-Package com.strava.api
+Latest version updated for Strava was updated in January 07, 2023
 
 Feedback
 ============
@@ -72,14 +61,14 @@ Most of the methods are overwritten. When you don't need to pass a parameter to 
 
 ```C#
 //Receive the currently authorized athlete
-Athlete athlete = await client.GetAthleteAsync();
+Athlete athlete = await client.Athletes.GetAthleteAsync();
 ```
   
 When you pass a parameter to the method, you can get data from another athlete.
     
 ```C#
 //Receive an other athlete
-Athlete athlete = await client.GetAthleteAsync("1985994");
+Athlete athlete = await client.Athletes.GetAthleteAsync("<id here>");
 ```
 
 Limits
@@ -121,7 +110,7 @@ StaticAuthentication auth = new StaticAuthentication("<token here>");
 StravaClient client = new StravaClient(auth);
 
 //Receive the currently authenticated athlete
-Athlete athlete = await client.GetAthleteAsync();
+Athlete athlete = await client.Athletes.GetAthleteAsync();
 ```
 
 ```C#
@@ -129,7 +118,7 @@ StaticAuthentication auth = new StaticAuthentication("<token here>");
 StravaClient client = new StravaClient(auth);
 
 //Receive an other athlete
-Athlete athlete = await client.GetAthleteAsync("1985994");
+Athlete athlete = await client.Athletes.GetAthleteAsync("<id here>");
 ```
 
 ```C#
@@ -137,7 +126,7 @@ StaticAuthentication auth = new StaticAuthentication("<token here>");
 StravaClient client = new StravaClient(auth);
 
 //Get my followers
-List<Athlete> athlete = await client.GetFollowersAsync();
+List<Athlete> athlete = await client.Athletes.GetFollowersAsync();
 ```
 
 
@@ -166,30 +155,6 @@ The *AcitivtySummary* and *ActivityMeta* classes were added to avoid some nasty 
 | GetActivityBeforeAsync(String id, DateTime before) | List&lt;ActivitySummary&gt; | Gets a list of activities that were recorded before the specified date. |
 | GetActivityAfterAsync(String id, DateTime after) | List&lt;ActivitySummary&gt; | Gets a list of activities that were recorded after the specified date. |
 | DeleteActivity(String activityId) | void | Deletes the specified activity. Requires you to be the *owner* of the activity and **write** permissions. |
-
-Examples
---------------
-
-```C#
-StaticAuthentication auth = new StaticAuthentication("<token here>");
-StravaClient client = new StravaClient(auth);
-
-//Receive an activity
-Activity athlete = await client.GetActivityAsync("102162300");
-```
-
-```C#
-StaticAuthentication auth = new StaticAuthentication("<token here>");
-StravaClient client = new StravaClient(auth);
-
-//Receive all the comments
-List<Comment> comments = await client.GetCommentsAsync("102162300");
-
-foreach (Comment comment in comments)
-{
-    Console.WriteLine(String.Format("{0} {1} says '{2}'", comment.Athlete.FirstName, comment.Athlete.LastName, comment.Text));
-}
-```
 
 Clubs
 ============
