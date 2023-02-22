@@ -7,19 +7,6 @@ Important Notes (Read me first!)
 This project was forked from the timheuer repo, which in turn was forked from the original by sascha-simon, neither of which have been updated in a long time.
 It is therefore very possible that various aspects of the project don't work as originally intended, or don't work full stop, due to changes made by Strava in their API.
 
-Intro
-============
-
-Current version: 4.0.1 (June 2021)
-
-Hopefully this small framework makes using the Strava API a little bit easier!
-Please keep in mind that this framework is in a pretty early stage and things are about to change.
-Kudos to Strava for letting people use data uploaded to Strava! Strava.NET uses the great Json.NET library from James Newton-King - such a great piece of code.
-
-You can get the framework by using NuGet:
-
-    PM> Install-Package com.strava.api
-
 Feedback
 ============
 
