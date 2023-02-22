@@ -21,6 +21,7 @@ using System;
 using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
+using com.strava.api.Activities;
 using com.strava.api.Segments;
 using com.strava.api.Api;
 using com.strava.api.Authentication;

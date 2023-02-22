@@ -20,6 +20,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using com.strava.api.Activities;
 using com.strava.api.Segments;
 using com.strava.api.Api;
 using com.strava.api.Athletes;

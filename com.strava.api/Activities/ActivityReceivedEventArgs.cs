@@ -17,7 +17,7 @@
 
 #endregion
 
-namespace com.strava.api.Segments
+namespace com.strava.api.Activities
 {
     /// <summary>
     /// This class holds information about the received activity.

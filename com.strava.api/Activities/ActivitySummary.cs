@@ -23,7 +23,7 @@ using System.Linq;
 using com.strava.api.Athletes;
 using Newtonsoft.Json;
 
-namespace com.strava.api.Segments
+namespace com.strava.api.Activities
 {
     /// <summary>
     /// Represents a less detailed version of an activity.

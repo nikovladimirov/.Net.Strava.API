@@ -17,7 +17,7 @@
 
 #endregion
 
-namespace com.strava.api.Segments
+namespace com.strava.api.Activities
 {
     /// <summary>
     /// Specifies the parameter whereby the leaderboard will be sorted by.
