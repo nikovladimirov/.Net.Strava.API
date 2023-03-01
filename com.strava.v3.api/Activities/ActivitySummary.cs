@@ -59,6 +59,20 @@ namespace com.strava.v3.api.Activities
                 catch { return ActivityType.Unknown; }
             }
         }
+        
+        /// <summary>
+        /// The sport type of the activity.
+        /// </summary>
+        [JsonProperty("sport_type")]
+        private String _sport_type { get; set; }
+        public SportType SportType
+        {
+            get
+            {
+                try { return (SportType)Enum.Parse(typeof(SportType), _sport_type); }
+                catch { return SportType.Unknown; }
+            }
+        }
 
         /// <summary>
         /// The distance travelled.
@@ -342,6 +356,6 @@ namespace com.strava.v3.api.Activities
         /// Suffer Score value for the activity
         /// </summary>
         [JsonProperty("suffer_score")]
-        public int SufferScore { get; set; }
+        public Double SufferScore { get; set; }
     }
 }
