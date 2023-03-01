@@ -169,36 +169,6 @@ namespace com.strava.v3.api.Activities
         /// </summary>
         Workout,
         /// <summary>
-        /// Yoga
-        /// </summary>
-        Yoga,
-        /// <summary>Badminton</summary>
-        Badminton,
-        /// <summary>EMountainBikeRide</summary>
-        EMountainBikeRide,
-        /// <summary>GravelRide</summary>
-        GravelRide,
-        /// <summary>HighIntensityIntervalTraining</summary>
-        HighIntensityIntervalTraining,
-        /// <summary>MountainBikeRide</summary>
-        MountainBikeRide,
-        /// <summary>Pickleball</summary>
-        Pickleball,
-        /// <summary>Pilates</summary>
-        Pilates,
-        /// <summary>Racquetball</summary>
-        Racquetball,
-        /// <summary>Squash</summary>
-        Squash,
-        /// <summary>TableTennis</summary>
-        TableTennis,
-        /// <summary>Tennis</summary>
-        Tennis,
-        /// <summary>TrailRun</summary>
-        TrailRun,
-        /// <summary>VirtualRow</summary>
-        VirtualRow,
-        /// <summary>
         /// Unknown - only returned if the activity type cannot be parsed (could be that a new type of activity has been introduced that the API doesnt yet support)
         /// </summary>
         Unknown
