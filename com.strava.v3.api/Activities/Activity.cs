@@ -20,6 +20,7 @@
 using System;
 using System.Collections.Generic;
 using com.strava.v3.api.Gear;
+using com.strava.v3.api.Metrics;
 using com.strava.v3.api.Segments;
 using Newtonsoft.Json;
 
@@ -53,5 +54,8 @@ namespace com.strava.v3.api.Activities
         /// </summary>
         [JsonProperty("description")]
         public String Description { get; set; }
+        
+        [JsonProperty("splits_metric")]
+        public List<Metric> Metrics { get; set; }
     }
 }
