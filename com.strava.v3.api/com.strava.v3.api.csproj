@@ -16,7 +16,7 @@
         <RepositoryUrl>https://github.com/tdao7/.Net-Strava-API.git</RepositoryUrl>
         <RepositoryType/>
         <Copyright>(C) 2014 Sascha Simon / 2021 Robert Eves / 2024 Truong Xuan</Copyright>
-        <PackageTags>Strava, API</PackageTags>
+        <PackageTags>Strava, API, APIV3, Strava .Net, Strava .NET Core, Strava V3 .Net Core</PackageTags>
         <Company>VCoderLog</Company>
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
