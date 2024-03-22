@@ -357,5 +357,23 @@ namespace com.strava.v3.api.Activities
         /// </summary>
         [JsonProperty("suffer_score")]
         public Double SufferScore { get; set; }
+
+        /// <summary>
+        /// The identifier of the upload that resulted in this activity
+        /// </summary>
+        [JsonProperty("upload_id")]
+        public long uploadId { get; set; }
+
+        /// <summary>
+        /// The unique identifier of the upload in string format
+        /// </summary>
+        [JsonProperty("upload_id_str")]
+        public string uploadIdStr { get; set; }
+
+        /// <summary>
+        /// The name of the device used to record the activity
+        /// </summary>
+        [JsonProperty("device_name")]
+        public string deviceName { get; set; }
     }
 }

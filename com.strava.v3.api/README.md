@@ -1,18 +1,15 @@
 com.strava.v3.api
 ============
+Latest version updated for Strava was updated in Mar 22, 2024
 
-Important Notes (Read me first!)
+Changelog
 ============
+| Version | Changes                                                          |
+|---------|------------------------------------------------------------------|
+| 5.0.4   | Sync new Activity obj from Strava V3                             |
+| 5.0.3   | Get metric splits in activity from Strava<br/>Fix sync bug issue |
+| 5.0.1   | Maintain old version of Strava API<br/> Fix bugs                 |
 
-This project was forked from the RobertEves92 repo, which in turn was forked from the original by sascha-simon, neither of which have been updated in a long time.
-It is therefore very possible that various aspects of the project don't work as originally intended, or don't work full stop, due to changes made by Strava in their API.
-
-Latest version updated for Strava was updated in January 07, 2023
-
-Feedback
-============
-
-If you have any feedback, bug reports or suggestions, feel free to add an issue to the repo and I'll look in to it
 
 
 Getting an access token from Strava
@@ -219,4 +216,17 @@ check.UploadChecked += delegate(object o, UploadStatusCheckedEventArgs args)
 
 check.Start();
 ```
+Feedback
+============
+
+If you have any feedback, bug reports or suggestions, feel free to add an issue to the repo and I'll look in to it
+
+Important Notes 
+============
+
+This project was forked from the RobertEves92 repo, which in turn was forked from the original by sascha-simon, neither of which have been updated in a long time.
+It is therefore very possible that various aspects of the project don't work as originally intended, or don't work full stop, due to changes made by Strava in their API.
+
+Latest version updated for Strava was updated in Mar 22, 2024
+
 

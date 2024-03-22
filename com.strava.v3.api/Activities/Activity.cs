@@ -55,7 +55,16 @@ namespace com.strava.v3.api.Activities
         [JsonProperty("description")]
         public String Description { get; set; }
         
+        /// <summary>
+        /// The activity's distance in meters.
+        /// </summary>
         [JsonProperty("splits_metric")]
         public List<Metric> Metrics { get; set; }
+        
+        /// <summary>
+        /// The activity's distance in meters.
+        /// </summary>
+        [JsonProperty("splits_standard")]
+        public List<Metric> SplitStandard { get; set; }
     }
 }

@@ -4,17 +4,16 @@
         <TargetFramework>netstandard2.0</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-        <Version>5.0.3</Version>
+        <Version>5.0.4</Version>
         <PackageId>com.strava.v3.api</PackageId>
         <Authors>Sascha Simon / Robert Eves / Truong Xuan</Authors>
         <Product>Strava DotNet API</Product>
         <Description>DotNet API Helper for Strava API v3
-            Forked from https://github.com/LarsAndreasEk/stravadotnet via https://github.com/timheuer/stravadotnet via
-            Original API Copyright (C) 2014 Sascha Simon, Robert Eves
-            Updates Copyright (C) 2023 Truong Dao
+            Forked from https://github.com/RobertEves92/stravadotnet.git via https://github.com/LarsAndreasEk/stravadotnet via https://github.com/timheuer/stravadotnet via
+            Original API Copyright (C) 2014 Sascha Simon, Robert Eves, Truong Xuan
         </Description>
         <PackageProjectUrl>https://github.com/tdao7/.Net-Strava-API</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/RobertEves92/stravadotnet.git</RepositoryUrl>
+        <RepositoryUrl>https://github.com/tdao7/.Net-Strava-API.git</RepositoryUrl>
         <RepositoryType/>
         <Copyright>(C) 2014 Sascha Simon / 2021 Robert Eves / 2024 Truong Xuan</Copyright>
         <PackageTags>Strava, API</PackageTags>
