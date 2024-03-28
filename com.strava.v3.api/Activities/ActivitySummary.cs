@@ -362,7 +362,7 @@ namespace com.strava.v3.api.Activities
         /// The identifier of the upload that resulted in this activity
         /// </summary>
         [JsonProperty("upload_id")]
-        public long uploadId { get; set; }
+        public long? uploadId { get; set; }
 
         /// <summary>
         /// The unique identifier of the upload in string format
