@@ -25,6 +25,7 @@ using com.strava.v3.api.Api;
 using com.strava.v3.api.Athletes;
 using com.strava.v3.api.Authentication;
 using com.strava.v3.api.Common;
+using com.strava.v3.api.Http;
 using com.strava.v3.api.Utilities;
 
 namespace com.strava.v3.api.Clients
@@ -57,7 +58,7 @@ namespace com.strava.v3.api.Clients
         /// <param name="id">The Strava activity id.</param>
         /// <param name="includeEfforts">Used to include all segment efforts in the result.</param>
         /// <returns>The activity with the specified id.</returns>
-        public async Task<Activity> GetActivityAsync(String id, bool includeEfforts)
+        public async Task<Activity> GetActivityAsync(long id, bool includeEfforts)
         {
             String getUrl = String.Format("{0}/{1}?include_all_efforts={2}&access_token={3}", Endpoints.Activity, id, includeEfforts, Authentication.AccessToken);
             String json = await Http.WebRequest.SendGetAsync(new Uri(getUrl));
@@ -347,7 +348,7 @@ namespace com.strava.v3.api.Clients
         /// <param name="parameter">The parameter that will be updated.</param>
         /// <param name="value">The value the parameter is updated to.</param>
         /// <returns>A detailed representation of the updated activity.</returns>
-        public async Task<Activity> UpdateActivityAsync(String activityId, ActivityParameter parameter, String value)
+        public async Task<Activity> UpdateActivityAsync(long activityId, ActivityParameter parameter, String value)
         {
             String param = String.Empty;
 
@@ -371,18 +372,18 @@ namespace com.strava.v3.api.Clients
                 case ActivityParameter.Trainer:
                     param = "trainer";
                     break;
+                case ActivityParameter.SportType:
+                    param = "sport_type";
+                    break;
             }
 
-            String putUrl = String.Format("{0}/{1}?{2}={3}&access_token={4}",
+            String putUrl = String.Format("{0}/{1}",
                 Endpoints.Activity,
-                activityId,
-                param,
-                value,
-                Authentication.AccessToken);
+                activityId);
 
-            String json = await Http.WebRequest.SendPutAsync(new Uri(putUrl));
-
-            return Unmarshaller<Activity>.Unmarshal(json);
+            var json = string.Format("{{\"{0}\":\"{1}\"}}", param, value);
+            var httpClient = new HttpClientExtended();
+            return await httpClient.SendPutAsync<Activity>(putUrl, json, Authentication.AccessToken);
         }
 
         /// <summary>

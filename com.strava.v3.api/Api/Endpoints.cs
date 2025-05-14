@@ -82,5 +82,9 @@ namespace com.strava.v3.api.Api
         /// Url to the endpoint used for uploads.
         /// </summary>
         public const String Uploads = "https://www.strava.com/api/v3/uploads/";
+        /// <summary>
+        /// Url to the endpoint used for subscriptions.
+        /// </summary>
+        public const String Subscriptions = "https://www.strava.com/api/v3/push_subscriptions";
     }
 }

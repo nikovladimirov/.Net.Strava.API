@@ -77,6 +77,7 @@ namespace com.strava.v3.api.Clients
                 Streams = new StreamClient(authenticator);
                 Uploads = new UploadClient(authenticator);
                 Efforts = new EffortClient(authenticator);
+                Subscriptions = new SubscriptionClient(authenticator);
             }
             else
             {
@@ -125,6 +126,11 @@ namespace com.strava.v3.api.Clients
         /// The EffortClient is used to receive efforts on a segment.
         /// </summary>
         public EffortClient Efforts { get; set; }
+        
+        /// <summary>
+        /// The SubscriptionClient is used to receive subscriptions in StravaApp.
+        /// </summary>
+        public SubscriptionClient Subscriptions { get; set; }
 
         #endregion
 

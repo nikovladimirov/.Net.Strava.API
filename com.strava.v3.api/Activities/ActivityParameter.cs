@@ -47,6 +47,10 @@ namespace com.strava.v3.api.Activities
         /// <summary>
         /// Adds a description to an activity.
         /// </summary>
-        Description
+        Description,
+        /// <summary>
+        /// Activity Sport type
+        /// </summary>
+        SportType
     }
 }
