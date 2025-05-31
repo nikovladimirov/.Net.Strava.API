@@ -51,6 +51,10 @@ namespace com.strava.v3.api.Activities
         /// <summary>
         /// Activity Sport type
         /// </summary>
-        SportType
+        SportType,
+        /// <summary>
+        /// Activity Type
+        /// </summary>
+        Type
     }
 }

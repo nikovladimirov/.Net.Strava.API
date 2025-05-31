@@ -375,6 +375,9 @@ namespace com.strava.v3.api.Clients
                 case ActivityParameter.SportType:
                     param = "sport_type";
                     break;
+                case ActivityParameter.Type:
+                    param = "type";
+                    break;
             }
 
             String putUrl = String.Format("{0}/{1}",
